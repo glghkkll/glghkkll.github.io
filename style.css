@@ -74,7 +74,6 @@ body {
     padding: 10px 0;
 }
 
-.nav a.current,
 .nav a:hover {
     color: #c0392b;
 }
@@ -111,7 +110,7 @@ body {
     margin: -20px 0 20px;
 }
 .autotext h1::after {
-    content: '|';
+    content: '_';
     animation: blink 1s infinite;
 }
 @keyframes blink{
@@ -176,28 +175,6 @@ body {
     text-align: center;
 }
 .footer .container p a{
-    text-decoration: none;
-}
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contact span {
-    padding: 7px 15px;
-    font-size: 20px;
-}
-.contact ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contact ul li {
-    padding: 7px 15px;
-    font-size: 20px;
-}
-.contact ul li a{
     text-decoration: none;
 }
 
