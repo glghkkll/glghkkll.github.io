@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 @font-face {
     font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?cz5r5k');
-    src:  url('fonts/icomoon.eot?cz5r5k#iefix') format('embedded-opentype'),
-      url('fonts/icomoon.ttf?cz5r5k') format('truetype'),
-      url('fonts/icomoon.woff?cz5r5k') format('woff'),
-      url('fonts/icomoon.svg?cz5r5k#icomoon') format('svg');
+    src: url('fonts/icomoon.eot?cz5r5k');
+    src: url('fonts/icomoon.eot?cz5r5k#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?cz5r5k') format('truetype'),
+        url('fonts/icomoon.woff?cz5r5k') format('woff'),
+        url('fonts/icomoon.svg?cz5r5k#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -17,20 +18,39 @@
     padding: 0;
 }
 
+:root {
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+
+html {
+    transition: all 0.6s ease-in;
+}
+
+html.dark {
+    --primary-color: #1a1a1a;
+    --secondary-color: #e3e3e3;
+}
+html.dark {
+    /* background-color: var(--primary-color); */
+    background-color: #242424;
+    color: var(--secondary-color);
+}
+
 a {
     text-decoration: underline;
     border-bottom: 1px solid skyblue;
 }
 
 body {
-    font-family: 'Open Sans','icomoon', sans-serif;
-    color: #222;
+    font-family: 'Open Sans', 'icomoon', sans-serif;
+    /* color: #222; */
     scroll-behavior: smooth;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
 }
 
@@ -39,9 +59,11 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    background-color: #222;
+    /* background-color: #222; */
+    background-color: var(--primary-color);
     transition: all 0.4s ease-in-out;
 }
+
 .nav .container {
     display: flex;
     justify-content: space-between;
@@ -49,9 +71,11 @@ body {
     padding: 20px 0;
     transition: all 0.4s ease-in-out;
 }
+
 .nav .container h1 {
     flex: 1;
 }
+
 .nav ul {
     display: flex;
     list-style-type: none;
@@ -60,21 +84,33 @@ body {
 }
 
 .nav a {
+    font-size: 21px;
     border: 0;
     text-decoration: none;
-    color: #fff;
+    /* color: #fff; */
+    color: var(--secondary-color);
     padding: 7px 15px;
     transition: all 0.4s ease-in-out;
 }
 
+.mode {
+    font-size: 21px;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+/* .mode.dark {
+    color: #fff;
+} */
+
 .nav.active {
-    background-color: #fff;
+    /* background-color: #fff; */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.nav.active a {
+/* .nav.active a {
     color: #000;
-}
+} */
 
 .nav.active .container {
     padding: 10px 0;
@@ -91,7 +127,8 @@ body {
     background-position: center bottom;
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    /* color: #fff; */
+    color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,27 +152,33 @@ body {
     font-size: 46px;
     margin: -20px 0 20px;
 }
+
 .autotext h1::after {
     content: '_';
     animation: blink 1s infinite;
 }
-@keyframes blink{
-    from{
+
+@keyframes blink {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
+
 .autotext p {
     font-size: 20px;
     letter-spacing: 4px;
 }
+
 .content,
 .about {
     margin-top: 30px;
     padding: 25px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: var(--primary-color);
     border-radius: 10px;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2)
 }
@@ -146,20 +189,23 @@ body {
     font-size: 200%;
     margin-bottom: 20px;
 }
+
 .content h3,
 .about h3 {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .content p {
-  color: #555;
-  line-height: 30px;
-  letter-spacing: 2px;
+    /* color: #555; */
+    color: var(--secondary-color);
+    line-height: 30px;
+    letter-spacing: 2px;
 }
 
 .content a {
     text-decoration: none;
-    color: #555;
+    /* color: #555; */
+    color: var(--secondary-color);
 }
 
 .content a:hover {
@@ -173,14 +219,16 @@ body {
 
 .footer {
     margin-top: 30px;
-    background-color: #fff;
+    /* background-color: #fff; */
+    background-color: var(--primary-color);
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-.footer .container p a{
-    text-decoration: none;
-}
 
+.footer .container p a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
