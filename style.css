@@ -17,6 +17,11 @@
     padding: 0;
 }
 
+a {
+    text-decoration: underline;
+    border-bottom: 1px solid skyblue;
+}
+
 body {
     font-family: 'Open Sans','icomoon', sans-serif;
     color: #222;
@@ -55,6 +60,7 @@ body {
 }
 
 .nav a {
+    border: 0;
     text-decoration: none;
     color: #fff;
     padding: 7px 15px;
@@ -75,7 +81,7 @@ body {
 }
 
 .nav a:hover {
-    color: #c0392b;
+    color: skyblue;
 }
 
 .autotext {
@@ -157,7 +163,7 @@ body {
 }
 
 .content a:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: #409eff;
 }
 
