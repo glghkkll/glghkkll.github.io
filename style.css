@@ -58,6 +58,7 @@ body {
     left: 0;
     background-color: var(--primary-color);
     transition: all 0.5s ease-in-out;
+    z-index: 99;
 }
 
 .nav .container {
@@ -108,7 +109,8 @@ body {
 
 .autotext {
     /* 图片源地址 https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260 */
-    background-image: url('./images/backgroundimg.webp');
+    /* background-image: url('./images/backgroundimg.webp'); */
+    background-image: url('https://www.todaybing.com/api/today/cn');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
@@ -119,7 +121,9 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    z-index: -2;
+}
+.autotext .container {
+    z-index: 1;
 }
 
 .autotext::before {
@@ -130,7 +134,6 @@ body {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
 }
 
 .autotext h1 {

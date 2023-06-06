@@ -39,3 +39,18 @@ mode.addEventListener('click', () => {
         html.classList.add('dark')
     }
 })
+
+// 添加名言警句
+const quoteEl = document.querySelector('#quote')
+async function getQuote() {
+    const res = await fetch('https://v1.hitokoto.cn?c=d&c=k')
+    const data = await res.json()
+    console.log(data);
+    quoteEl.innerText = `${data.hitokoto}——${data.from_who}`
+}
+
+getQuote()
+const autoTextEl = document.querySelector('.autotext')
+autoTextEl.addEventListener('click', () => {
+    getQuote()
+})
