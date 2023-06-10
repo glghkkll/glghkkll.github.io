@@ -46,7 +46,7 @@ async function getQuote() {
     const res = await fetch('https://v1.hitokoto.cn?c=d&c=k')
     const data = await res.json()
     console.log(data);
-    quoteEl.innerText = `${data.hitokoto}——${data.from_who}`
+    quoteEl.innerText = `${data.hitokoto}——${data.from_who == null ? '佚名' : data.from_who}`
 }
 
 getQuote()
