@@ -1,223 +1,222 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @font-face {
-    font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?cz5r5k');
-    src: url('fonts/icomoon.eot?cz5r5k#iefix') format('embedded-opentype'),
-        url('fonts/icomoon.ttf?cz5r5k') format('truetype'),
-        url('fonts/icomoon.woff?cz5r5k') format('woff'),
-        url('fonts/icomoon.svg?cz5r5k#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?cz5r5k');
+  src: url('fonts/icomoon.eot?cz5r5k#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cz5r5k') format('truetype'),
+    url('fonts/icomoon.woff?cz5r5k') format('woff'),
+    url('fonts/icomoon.svg?cz5r5k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --primary-color: #fff;
-    --secondary-color: #000;
+  --primary-color: #fff;
+  --secondary-color: #000;
 }
 
 html {
-    transition: all 0.4s ease-in;
+  transition: background-color 0.4s ease-in, color 0.4s ease-in;
 }
 
 html.dark {
-    --primary-color: #1a1a1a;
-    --secondary-color: #e3e3e3;
-}
-html.dark {
-    background-color: #242424;
-    color: var(--secondary-color);
+  --primary-color: #1a1a1a;
+  --secondary-color: #e3e3e3;
+  background-color: #242424;
+  color: var(--secondary-color);
 }
 
 a {
-    text-decoration: underline;
-    border-bottom: 1px solid skyblue;
+  text-decoration: underline;
+  border-bottom: 1px solid skyblue;
 }
 
 body {
-    font-family: 'Open Sans', 'icomoon', sans-serif;
-    scroll-behavior: smooth;
+  font-family: 'Open Sans', 'icomoon', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
-    max-width: 1350px;
-    margin: 0 auto;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 
 .nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: var(--primary-color);
-    transition: all 0.5s ease-in-out;
-    z-index: 99;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
 }
 
 .nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: padding 0.5s ease-in-out;
 }
 
 .nav .container h1 {
-    flex: 1;
+  flex: 1;
 }
 
 .nav ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    align-items: center;
-    padding: 0 15px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
 }
 
 .nav a {
-    font-size: 21px;
-    border: 0;
-    text-decoration: none;
-    color: var(--secondary-color);
-    padding: 7px 15px;
-    transition: all 0.5s ease-in-out;
+  font-size: 21px;
+  border: 0;
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding: 7px 15px;
+  transition: color 0.5s ease-in-out;
 }
 
 .mode {
-    font-size: 21px;
-    cursor: pointer;
-    color: var(--secondary-color);
+  font-size: 21px;
+  cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .nav.active {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .nav.active .container {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .nav a:hover {
-    color: skyblue;
+  color: skyblue;
 }
 
 .autotext {
-    /* 图片源地址 https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260 */
-    /* background-image: url('./images/backgroundimg.webp'); */
-    background-image: url('https://www.todaybing.com/api/today/cn');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    height: 100vh;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+  /* 图片源地址 https://images.pexels.com/photos/450035/pexels-photo-450035.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260 */
+  /* background-image: url('./images/backgroundimg.webp'); */
+  background-image: url('https://www.todaybing.com/api/today/cn');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
+
 .autotext .container {
-    z-index: 1;
+  z-index: 1;
 }
 
 .autotext::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .autotext h1 {
-    font-size: 46px;
-    margin: -20px 0 20px;
+  font-size: 46px;
+  margin: -20px 0 20px;
 }
 
 .autotext h1::after {
-    content: '_';
-    animation: blink 1s infinite;
+  content: '_';
+  animation: blink 1s infinite;
 }
 
 @keyframes blink {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 .autotext p {
-    font-size: 20px;
-    letter-spacing: 4px;
+  font-size: 20px;
+  letter-spacing: 4px;
 }
 
 .content,
 .about {
-    margin-top: 30px;
-    padding: 25px;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease-in;
+  margin-top: 30px;
+  padding: 25px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in;
 }
 
 .content h2,
 .about h2 {
-    text-align: center;
-    font-size: 200%;
-    margin-bottom: 20px;
+  text-align: center;
+  font-size: 200%;
+  margin-bottom: 20px;
 }
 
 .content h3,
 .about h3 {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .content p {
-    color: var(--secondary-color);
-    line-height: 30px;
-    letter-spacing: 2px;
-    transition: all 0.5s ease-in;
+  color: var(--secondary-color);
+  line-height: 30px;
+  letter-spacing: 2px;
+  transition: color 0.5s ease-in;
 }
 
 .content a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    transition: all 0.5s ease-in;
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.5s ease-in;
 }
 
 .content a:hover {
-    color: #409eff;
+  color: #409eff;
 }
 
 .about li {
-    list-style: none;
+  list-style: none;
 }
 
 .footer {
-    margin-top: 30px;
-    background-color: var(--primary-color);
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all 0.5s ease-in;
+  margin-top: 30px;
+  background-color: var(--primary-color);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.5s ease-in;
 }
 
 .footer .container p a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    transition: all 0.5s ease-in;
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.5s ease-in;
 }
